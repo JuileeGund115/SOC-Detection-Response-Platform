@@ -30,10 +30,10 @@ Wazuh (manager, indexer, and dashboard) was deployed on the Ubuntu SOC server VM
 ## Issue encountered: dashboard crash loop (EISDIR error)
 
 **Problem**: The first deployment attempt ran out of disk space mid-download (see `01-environment-setup.md`). After the disk was expanded and the stack relaunched, the dashboard container repeatedly crashed with:
-'''
+```
 Error: EISDIR: illegal operation on a directory, read
 at readFile (.../ssl_config.js:170:31)
-'''
+```
 **Diagnosis**: The failed first run had left behind corrupted, partially-written SSL certificate files. Regenerating certificates via Wazuh's cert generator produced `cp: cannot overwrite directory` errors, confirming the destination certificate directory itself was corrupted (a leftover from the failed run — not cleaned up by `docker compose down -v` since it lives on the host filesystem, not in a Docker-managed volume).
 
 **Fix**:
