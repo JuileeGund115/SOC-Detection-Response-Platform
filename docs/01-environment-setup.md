@@ -89,3 +89,6 @@ sudo dpkg --configure -a
 - [ ] VMware VM list showing all three machines
 - [ ] `df -h` output before and after disk expansion
 - [ ] Successful `docker run hello-world` output
+- [ ] 
+- [ ] ![Wazuh dashboard login](../screenshots/01-environment/vm-list.png)
+- [ ] ![Wazuh dashboard login](../screenshots/01-environment/disk-space.png)
