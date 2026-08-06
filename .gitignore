@@ -1,0 +1,32 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Wazuh / Docker local data (never commit real credentials or runtime data)
+.env
+*.pem
+*.key
+config/wazuh_indexer_ssl_certs/
+
+# VM files (too large for git, and machine-specific)
+*.vmdk
+*.vmx
+*.vmxf
+*.nvram
+*.vmsd
+*.vmss
+*.vmem
+*.iso
+
+# Logs
+*.log
+
+# Python (if we script anything for Sigma conversion later)
+__pycache__/
+*.pyc
+venv/
