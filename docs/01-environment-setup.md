@@ -26,9 +26,9 @@ Using Metasploitable2 and Kali instead of a Windows victim kept the lab lightwei
 1. **Hypervisor**: VMware Workstation 17 Player (non-commercial use), already installed
 2. **SOC server VM**: Ubuntu Server 22.04.3 LTS ("jammy"), initially provisioned with a 20GB virtual disk and 4GB RAM
 3. **Networking verification**: Confirmed internet access inside the Ubuntu VM. Hit an initial DNS resolution failure:
-
+```
 ping: google.com: Temporary failure in name resolution
-
+```
 Direct IP pings (`ping -c 4 8.8.8.8`) succeeded, confirming raw connectivity was fine and the issue was DNS-specific. Resolved by restarting the DNS resolver service:
 ```bash
    sudo systemctl restart systemd-resolved
