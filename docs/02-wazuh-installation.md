@@ -72,7 +72,8 @@ Confirmed all three containers (`wazuh.manager`, `wazuh.indexer`, `wazuh.dashboa
 
 ## Screenshots
 - [ ] `docker ps` showing all three containers healthy
+- [ ] ![Wazuh dashboard login](../screenshots/01-environment/disk-space.png)
 - [ ] Wazuh dashboard login page
+- [ ] ![Wazuh dashboard login](../screenshots/02-wazuh/wazuh-login.png)
 - [ ] Wazuh dashboard home screen after successful login
-
 - [ ] ![Wazuh dashboard login](../screenshots/02-wazuh/wazuh-dashboard.png)
